@@ -63,12 +63,15 @@ export const App = () => {
               sx={{
                 display: 'flex',
                 justifyContent: 'center',
-                padding: '1rem',
-                width: '400px',
-                height: '230px',
               }}
             >
-              <img width={'200px'} loading="lazy" src={weatherImg}></img>
+              <img
+                alt="Weather image"
+                width={'200px'}
+                height={'200px'}
+                loading="lazy"
+                src={weatherImg}
+              ></img>
             </Box>
           )}
         </>
