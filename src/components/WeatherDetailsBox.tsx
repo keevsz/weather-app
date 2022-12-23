@@ -116,9 +116,10 @@ const WeatherDetailsBox = () => {
                     />
                   ) : (
                     <img
+                      loading="lazy"
                       width={'100%'}
                       src={`https://openweathermap.org/img/wn/${weather.icon}@4x.png`}
-                    ></img>                    
+                    ></img>
                   )}
                 </Box>
               </Grid>

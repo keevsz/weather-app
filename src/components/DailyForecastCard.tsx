@@ -25,6 +25,7 @@ const DailyForecastCard = ({ item, loading }: Props) => {
               justifyContent="center"
             >
               <img
+                loading="lazy"
                 width={'35%'}
                 src={`https://openweathermap.org/img/wn/${item.weather.icon}.png`}
               />

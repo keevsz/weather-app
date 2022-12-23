@@ -7,7 +7,9 @@ interface Props {
 }
 const ForecastCard = ({ forecast, loading }: Props) => {
   const timeFormat = () => {
-    const time = parseInt(forecast.date.split(':')[0].split(' ').pop() as string)
+    const time = parseInt(
+      forecast.date.split(':')[0].split(' ').pop() as string
+    )
     return time && time >= 12 && time <= 24 ? time + ':00 PM' : time + ':00 AM'
   }
   return (
@@ -20,6 +22,7 @@ const ForecastCard = ({ forecast, loading }: Props) => {
           </Grid>
         ) : (
           <img
+            loading="lazy"
             width={'40%'}
             src={`https://openweathermap.org/img/wn/${forecast.icon}.png`}
             alt=""

@@ -6,10 +6,9 @@ import {
   Typography,
 } from '@mui/material'
 import { lazy, Suspense, useState } from 'react'
-import Lottie from 'react-lottie-player'
-import weatherGif from './assets/weatherimage.json'
 import { Loading, Options, PrincipalLayout, SearchBox } from './components'
 import { useWeatherContext } from './context/WeatherProvider'
+import weatherImg from './assets/weather.png'
 
 const WeatherDetailsBox = lazy(() => import('./components/WeatherDetailsBox'))
 
@@ -59,15 +58,17 @@ export const App = () => {
               <WeatherDetailsBox></WeatherDetailsBox>
             </Suspense>
           )}
-
           {!city.name && !cities[0] && (
-            <Box sx={{ display: 'flex', justifyContent: 'center' }}>
-              <Lottie
-                animationData={weatherGif}
-                loop
-                play
-                style={{ width: 150, height: 150 }}
-              />
+            <Box
+              sx={{
+                display: 'flex',
+                justifyContent: 'center',
+                padding: '1rem',
+                width: '400px',
+                height: '230px',
+              }}
+            >
+              <img width={'200px'} loading="lazy" src={weatherImg}></img>
             </Box>
           )}
         </>
