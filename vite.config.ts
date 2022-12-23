@@ -13,6 +13,7 @@ export default defineConfig({
         short_name: 'Weather',
         description: 'Application made to see weather of your city',
         theme_color: '#121212',
+        background_color: '#121212',
         icons: [
           {
             src: 'weather.png',
