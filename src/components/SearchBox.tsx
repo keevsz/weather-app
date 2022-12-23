@@ -39,6 +39,7 @@ const SearchBox = () => {
         }}
         fullWidth
         autoFocus
+        autoComplete='off'
       />
       {cities?.map((city: City, index: number) => (
         <CityCard key={index} city={city}></CityCard>
